@@ -1,21 +1,16 @@
 body, html {
   height: 100%;
+  background-color: black;
 }
 
-.bgimg {
-  background: url(/img/order.jpg);
-  height: 100%;
+img {
+  margin-top: 50px;
+  width: 80%;
+  height: auto;
 }
 
-.bgimg {
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.container {
-  margin-top: 350px;
+.info {
+  margin-top: 50px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
-  background: rgba(0, 0, 0, 0.459);
+  background: rgba(94, 92, 92, 0.459);
 }
