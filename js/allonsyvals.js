@@ -42,35 +42,35 @@ const submitBI = () => {
     });
 };
 
-// const displayEmails = () => {
-//   // collect constantly reloading snapshot from firebase
-//   db.collection('submissions').onSnapshot(function(doc) {
-//     const submissions = {
-//       names: [],
-//       emails: []
-//     };
-//     const names = submissions.names,
-//       emails = submissions.emails;
+const displayEmails = () => {
+  // collect constantly reloading snapshot from firebase
+  db.collection('submissions').onSnapshot(function(doc) {
+    const submissions = {
+      names: [],
+      emails: []
+    };
+    const names = submissions.names,
+      emails = submissions.emails;
 
-//     doc.forEach(document => {
-//       names.push(document.data().name);
-//       emails.push(document.data().email);
-//     });
-//     console.log('all submissions: ', submissions);
+    doc.forEach(document => {
+      names.push(document.data().name);
+      emails.push(document.data().email);
+    });
+    console.log('all submissions: ', submissions);
 
-//     // display submission
-//     names.forEach(name => {
-//       // target the html space youll create this shit in
-//       let div = document.createElement('div');
-//       // create a two col-md-6 row in the html with the name in first col and email in second col
-//       div.setAttribute('class', 'row');
-//       div.innerHTML = name;
-//     });
-//     emails.forEach(email => {
-//       console.log(email);
-//     });
-//   });
-// };
+    // display submission
+    names.forEach(name => {
+      console.log(email);
+      // target the html space youll put the names in
+      $('.names').append(`<p>${name}</p>`);
+    });
+    emails.forEach(email => {
+      console.log(email);
+      // target the html space youll put the emails in
+      $('.emails').append(`<p>${email}</p>`);
+    });
+  });
+};
 
 $('#basic_info').submit(function(e) {
   e.preventDefault();
